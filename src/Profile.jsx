@@ -34,7 +34,7 @@ const Profile = ({ delay }) => {
         .then((response) => response.json())
         .then((response) => setImageURL(response[0].url))
         .catch((error) => console.error(error));
-    }, delay); //Initial fake loading delay
+    }, ); 
 
     setTimeout(() => {
       fetch("https://jsonplaceholder.typicode.com/photos", { mode: "cors" })
@@ -43,7 +43,7 @@ const Profile = ({ delay }) => {
           setBioText("Bio here pls ")
         )
         .catch((error) => console.error(error));
-    }, delay + 2000); //Second delay for bio text
+    },); 
   }, [delay] );
 
   return (
